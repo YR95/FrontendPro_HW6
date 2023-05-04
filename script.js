@@ -22,44 +22,43 @@
 
 */
 
-year = prompt("Рік твого народження: ");
-if ((year === null) || (year === "")) {
-    age = "вік: Шкода, що Ви не захотіли ввести рік народження";
+year = prompt('Рік твого народження: ');
+
+if ((year === null) || (year === '')) {
+  age = 'вік: Шкода, що Ви не захотіли ввести рік народження';
 } else {
-    age = `вік: ${new Date().getFullYear().valueOf() - parseInt(year)}`;
+  age = `вік: ${new Date().getFullYear().valueOf() - parseInt(year)}`;
 }
 
-city = prompt("У якому місці мешкаєш: ");
-if ((city === null) || (city === "")) {
-    city = " Шкода, що Ви не захотіли ввести місто";
+city = prompt('У якому місці мешкаєш: ');
 
-}
-else {
+if ((city === null) || (city === '')) {
+  city = ' Шкода, що Ви не захотіли ввести місто';
 
-
-    if ((city === "Київ") || (city === "Вашингтон") || (city === "Лондон")) {
-        city=`Ти живеш у столиці: ${city}`;
-    } else {
-        city=`Ти живеш у місті:  ${city}`;
-    }
+} else {
+  if ((city === 'Київ') || (city === 'Вашингтон') || (city === 'Лондон')) {
+    city = `Ти живеш у столиці: ${city}`;
+  } else {
+    city = `Ти живеш у місті:  ${city}`;
+  }
 }
 
+sport = prompt('Улюблений вид спорта: ');
 
-
-sport = prompt("Улюблений вид спорта: ");
-if ((sport === null) || (sport === "")) {
-    resSoprt = " Шкода, що Ви не захотіли ввести спорт";
+if ((sport === null) || (sport === '')) {
+  resSoprt = ' Шкода, що Ви не захотіли ввести спорт';
 }
 switch (sport) {
-    case "бокс":
-        resSoprt = "Круто! Хочеш стати Кличко? ";
-        break;
-    case "теніс":
-        resSoprt = "Круто! Хочеш стати Стаховський?";
-        break;
-    case "плавання":
-        resSoprt = "Круто! Хочеш стати Єгошин?";
-        break;
+  case 'бокс':
+    resSoprt = 'Круто! Хочеш стати Кличко? ';
+    break;
+  case 'теніс':
+    resSoprt = 'Круто! Хочеш стати Стаховський?';
+    break;
+  case 'плавання':
+    resSoprt = 'Круто! Хочеш стати Єгошин?';
+    break;
 
 }
+
 alert(`${age} ${city} ${resSoprt}`);
